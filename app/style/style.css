@@ -1,0 +1,1294 @@
+/********** Debut Fonts **********/
+/* Definitions des polices personnalisees
+Titre du site : ethnocentric
+Titres : acari-sans, sans-serif
+Paragraphes : spectral, serif
+
+Equivalence de taille des titres (h) avec "font-size" en "em" et en "px"
+h1 => 2em	=> 32px
+h2 => 1.5em	=> 24px
+h3 => 1.17em	=> 19px
+h4 => 1em		=> 16px
+h5 => 0.83em	=> 13.5px
+h6 => 0.67em	=> 10.5px */
+
+@font-face {
+	font-family: 'acari-sans';
+	src: url('polices/acari-sans/AcariSans-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'acari-sans';
+	src: url('polices/acari-sans/AcariSans-Italic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'acari-sans';
+	src: url('polices/acari-sans/AcariSans-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'acari-sans';
+	src: url('polices/acari-sans/AcariSans-BoldItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'spectral';
+	src: url('polices/spectral/spectral-regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'spectral';
+	src: url('polices/spectral/spectral-italic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'spectral';
+	src: url('polices/spectral/spectral-bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'spectral';
+	src: url('polices/spectral/spectral-bolditalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'slaytanic';
+	src: url('polices/slaytanic/slaytanic.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'ethnocentric';
+	src: url('polices/ethnocentric/ethnocentric.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'ethnocentric';
+	src: url('polices/ethnocentric/ethnocentric-italic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: normal;
+}
+/********** Fin Fonts **********/
+/********** Debut Variables **********/
+:root {
+	/***** Couleurs *****/
+	--fndHeader: #FFF8DC;
+	--fndNavHeader: #F0FFFF;
+	--fndNavSide: #F1F1F1;
+	--fndFooter: #D8EEE0;
+	--Noir: #000000; /* Noir */
+	--Rouge: #FF0000; /* Rouge */
+	--Bleu: #0000FF; /* Bleu */
+	--txtInfBorder: #22BB22; /* Vert */
+	--infbul: #8A2BE2; /* violet */
+	--fndProg: #DFDFDF; /*  Gris très clair */
+	--fndInput: #EFEFEF; /* Gris très clair */
+	--fndTxtArea: #EFEFEF; /* Gris très clair */
+	--fndTabTh: #C1C1C1; /* Gris */
+	--supAside: #DBE9CD; /* Vert pale */
+	--codeAside: #DCD8CA;
+	--sitExtAside: #F1E6E6;
+	--recAside: #DBE9CD;
+	--liSnippets: #007BBF; /* Bleu href */
+	--lititleSnippet: #00FF00; /* Vert */
+	--violet: #9932CC;
+}
+/********** Fin Variables **********/
+/********** Debut General **********/
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	padding: 5px;
+	text-decoration: none;
+	color: black;
+}
+.alert {
+	border-radius: 8px;
+}
+.btn-violet {
+	color: #fff;
+	background-color: #9932CC;
+	border-color: #9932CC;
+}
+.btn-violet:hover {
+	color: #fff;
+	background-color: #8214FA;
+	border-color: #780AFF;
+}
+.btn-violet:focus {
+	box-shadow: 0 0 0 0.2rem rgba(170, 65, 200, 0.5);
+}
+main {
+	justify-content: center;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: spectral, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: acari-sans, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+.text_overline {
+	text-decoration: overline;
+}
+.text_underline {
+	text-decoration: underline;
+}
+.text_italic {
+	font-style: italic;
+}
+.text_red {
+	color: var(--Rouge);
+}
+.text_encad_black {
+	padding: 0 3px;
+	border: 2px solid var(--Noir);
+}
+.text_encad_red {
+	padding: 0 3px;
+	border: 2px solid var(--Rouge);
+}
+.text_encerc_black {
+	padding: 0 3px;
+	border: 2px solid var(--Noir);
+	border-radius: 10px;
+}
+.text_encerc_red {
+	padding: 0 3px;
+	border: 2px solid var(--Rouge);
+	border-radius: 10px;
+}
+.text_majuscule {
+	text-transform: uppercase;
+}
+.zmargin_bottom {
+	margin-bottom: 0;
+}
+.nomargin_bottom {
+	margin-bottom: 5px;
+}
+.infobulle {
+
+}
+.programme {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 5px 8px 3px 8px;
+	background-color: var(--fndProg);
+	position: relative;
+	border-radius: 10px;
+
+}
+.programme p {
+	margin-bottom: 0;
+}
+.indent1fois {
+	text-indent: 1.4em;
+}
+.indent2fois {
+	text-indent: 2.8em;
+}
+.indent3fois {
+	text-indent: 4.2em;
+}
+.indent4fois {
+	text-indent: 5.6em;
+}
+.indent5fois {
+	text-indent: 7em;
+}
+.css, .javascript, .php {
+	margin-left: 20px;
+}
+caption {
+	text-align: center;
+}
+table thead {
+	text-align: center;
+}
+.ws-nowrap {
+	white-space: nowrap;
+}
+/********** Fin General **********/
+
+/********** Debut Header **********/
+header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--fndHeader);
+}
+header > div {
+	margin-top: 60px;
+	display: flex;
+	height: 240px;
+	width: 100%;
+}
+header > div > figure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 240px;
+	width: 25%;
+}
+header > div > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75%;
+}
+header h1 {
+	padding-left: 50px;
+	font-family: ethnocentric, sans-serif;
+	font-size: 5em;
+	font-weight: bold;
+	letter-spacing: 50px;
+}
+/********** Debut Menus **********/
+nav {
+
+}
+/***** Debut Menu Header *****/
+#nav_header {
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	width: 100%;
+	background-color: var(--fndNavHeader);
+	position:fixed;
+	z-index: 10;
+}
+#nav_header div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#button_inscription {
+	padding: 0 5px;
+	background-color: skyblue;
+	border-radius: 8px;
+}
+#zone_recherche {
+	margin-left: 10px;
+	padding: 0 6px;
+	border: none;
+	height: 36px;
+	width: 180px;
+	border-radius: 10px 0 0 10px;
+}
+#nav_header div img {
+	height: 32px;
+}
+#nav_header > div > a {
+	margin: 20px;
+}
+#nav_header ul {
+	padding-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+#nav_header li {
+	padding: 0 20px;
+}
+/***** Fin Menu Header *****/
+/********** Fin Header **********/
+main {
+	display: flex;
+	/*justify-content: center;*/
+	width: 100%;
+}
+/***** Debut Menu Side *****/
+#nav_side {
+	padding: 15px 5px;
+	display: flex;
+	justify-content: center;
+	width: 16%;
+	min-width: 180px;
+	background-color: var(--fndNavSide);
+}
+/***** Fin Menu Side *****/
+/********** Fin Menus **********/
+
+/********** Debut Sections **********/
+/***** Debut Section globale *****/
+section {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+section h1 {
+	margin: 20px 0;
+	font-size: 2.8em;
+	width: 100%;
+}
+section h2 {
+	font-size: 2.2em;
+	width: 100%;
+}
+section h3 {
+	font-size: 1.6em;
+}
+section h4 {
+	font-size: 1.2em;
+}
+section li:before {
+	content: "\002212  ";
+	color: var(--Bleu);
+}
+.etoile li:before {
+	content: " 	\002217  ";
+}
+.btn_bas_page {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.btn_bas_page a:first-child {
+	margin-right: 20px;
+	width: auto;
+	border-radius: 20px 5px 5px 20px;
+}
+.btn_bas_page a:nth-child(2) {
+	margin: 0 20px;
+	border-radius: 5px;
+}
+.btn_bas_page a:last-child {
+	margin-left: 20px;
+	width: auto;
+	border-radius: 5px 20px 20px 5px;
+}
+/***** Fin Section globale *****/
+/***** Debut Pages Accueil, Autres_sites, et Galerie *****/
+#section_accueil, #section_autres_sites, #section_galerie {
+	padding: 10px 0;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#section_accueil figure, #section_galerie figure,
+#section_autres_sites figure {
+	margin: 50px 0;
+	align-items: center;
+	width: 22%;
+	text-align: center;
+}
+#section_accueil figure img, #section_autres_sites figure img
+#section_galerie figure img {
+	width: 60%;
+}
+#section_accueil h1 {
+	margin: 30px 0 0 0;
+	font-size: 3.6em;
+}
+#section_accueil .fig_rubrique {
+	perspective: 350px;
+}
+#section_accueil .img_rubrique {
+	transition: transform 0.5s;
+}
+#section_accueil .img_to_menu {
+	transform: translate3d(-10px, 0, 340px) rotateY(180deg) scaleY(1.1);
+}
+/*.imguml:hover {
+transform: perspective(200px) rotateY(89.8deg) translateX(-100px);
+}*/
+/*.img_rubrique:hover {
+transform: translate3d(-10px, 0, 340px) rotateY(93.5deg) scaleY(1.1);
+}*/
+#section_autres_sites figure img {
+	 max-width: 300px;
+	 transition: transform 0.5s;
+ }
+#section_autres_sites figure img:hover {
+	transform: rotate(10deg) scale(1.2);
+}
+#section_galerie figure img {
+	/*width: 200px;*/
+}
+/***** Fin Pages Accueil, Autres_sites, et Galerie *****/
+/***** Debut Page Boole *****/
+#section_boole {
+
+}
+.table_verite {
+	margin-top: 15px;
+	text-align: center;
+}
+.table_verite th {
+	background-color: var(--fndTabTh);
+}
+.table_verite th, .table_verite td {
+	border: 2px solid black;
+}
+.table_col1car {
+	width: 40px;
+}
+.table_col5car {
+	width: 90px;
+}
+.table_col10car {
+	width: 120px;
+}
+/***** Fin Page Boole *****/
+/***** Debut Page Algo *****/
+#section_algo pre {
+	font-family: spectral, serif;
+	font-size: 1rem;
+}
+#section_algo .algo {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 5px 8px 3px 8px;
+	background-color: var(--fndProg);
+	position: relative;
+	border-radius: 10px;
+}
+#section_algo table {
+	margin-bottom: 15px;
+}
+.tab_in-out {
+	width: 60%;
+}
+.tab_in-out > thead > tr td:last-child {
+	width: 50%;
+}
+.tab_in-out td {
+	text-align: center;
+	border: none;
+}
+.tab_lang_algo > thead > tr td:last-child {
+	width: 50%;
+}
+.tab_lang_algo td {
+	vertical-align: top;
+	text-align: left;
+	border: none;
+}
+.tab_photocop {
+	margin-left: 15px;
+}
+.tab_photocop tr td:first-child {
+	width: 100px;
+	text-align: center;
+}
+.tabs_functions img {
+	width: 84px;
+}
+.tabs_functions .tab_functions_img3 {
+	width: 62px;
+}
+.tab_func_cprix {
+	text-align: center;
+}
+/***** Fin Page Algo *****/
+/***** Debut Page Uml *****/
+#section_uml {
+
+}
+/***** Fin Page Uml *****/
+/***** Debut Page Model_bdd *****/
+#section_model_bdd {
+
+}
+/***** Fin Page Model_bdd *****/
+/***** Debut Page Html *****/
+#section_html pre {
+	font-family: spectral, serif;
+	font-size: 1rem;
+}
+#section_html .html {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 5px 8px 3px 8px;
+	background-color: var(--fndProg);
+	position: relative;
+	border-radius: 10px;
+}
+#section_html .balise {
+	margin-right: 5px;
+	background-color: var(--fndProg);
+	border-radius: 6px;
+}
+#section_html .margleft {
+	margin-left: 20px;
+}
+#section_html {
+
+}
+/***** Fin Page html *****/
+/***** Debut Page Css *****/
+#section_css pre {
+	font-family: spectral, serif;
+	font-size: 1rem;
+}
+#section_css .css {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 5px 8px 3px 8px;
+	background-color: var(--fndProg);
+	position: relative;
+	border-radius: 10px;
+}
+#section_css .balise {
+	margin-right: 5px;
+	background-color: var(--fndProg);
+	border-radius: 6px;
+}
+#section_css .margleft {
+	margin-left: 20px;
+}
+#section_css {
+
+}
+#selectors td:first-child {
+	width: 250px;
+}
+/***** Fin Page Css *****/
+/***** Debut Page JavaScript *****/
+#section_js {
+
+}
+/***** Fin Page JavaScript *****/
+/***** Debut Page Php *****/
+#section_php {
+
+}
+/***** Fin Page Php *****/
+/***** Debut Page Java *****/
+#section_java {
+
+}
+/***** Fin Page Java *****/
+/***** Debut Page Sql *****/
+#section_sql {
+
+}
+/***** Fin Page Sql *****/
+/***** Debut Page MySql *****/
+#section_mysql {
+
+}
+/***** Fin Page MySql *****/
+/***** Debut Page Oracle *****/
+#section_oracle {
+
+}
+/***** Fin Page Oracle *****/
+/***** Debut Page Vietnam *****/
+#section_vietnam {
+
+}
+/***** Fin Page Vietnam *****/
+/***** Debut Page Recette *****/
+#section_recette {
+
+}
+#section_recette div {
+	padding: 0 20px;
+	text-align: center;
+	width: 100%;
+}
+#section_recette div div {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+#section_recette div div p {
+	width: 50%;
+}
+#section_recette div div:nth-child(3) p:last-child {
+	padding: 0 20px;
+	text-align: left;
+}
+/***** Fin Page Recette *****/
+/***** Debut Pages Warhammer *****/
+#section_warhammer {
+
+}
+/***** Fin Pages Warhammer *****/
+/***** Debut Pages Inscription, Connexion, Contact, et reply *****/
+#section_inscription, #section_connexion,
+#section_contact, #section_reply {
+	align-items: center;
+}
+#section_inscription form, #section_connexion form,
+#section_contact form, #section_reply form {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 900px;
+}
+#section_inscription form div, #section_connexion form div,
+#section_contact form div, #section_reply form div {
+	padding: 10px 0;
+}
+#section_inscription label, #section_connexion label {
+	width: calc(35% - 10px);
+}
+#section_contact label, #section_reply label {
+	width: calc(31% - 10px);
+}
+#section_inscription input, #section_connexion input,
+#section_contact input, #section_reply input {
+	background-color: var(--fndInput);
+	min-width: 180px;
+	border-radius: 6px;
+}
+#section_inscription input, #section_connexion input {
+	width: 31%;
+}
+#section_contact input, #section_reply input {
+	width: 40%;
+}
+#section_inscription form button, #section_connexion form button,
+#section_contact form button, #section_reply form button {
+	margin-top: 15px;
+	align-self: center;
+	width: auto;
+	border-radius: 4px;
+}
+#section_inscription form button, #section_connexion form button {
+	margin-bottom: 10px;
+}
+.message_connexion {
+	display: flex;
+}
+.message_contact, .message_reply {
+	display: flex;
+}
+#section_contact textarea, #section_reply textarea {
+	background-color: var(--fndTxtArea);
+	border-radius: 6px;
+	width: 40%;
+	min-width: 180px;
+	resize: none;
+}
+/***** Fin Pages Inscription, Connexion, Contact, et reply *****/
+/***** Debut Sections Snippets *****/
+#navcol {
+	display: flex;
+	flex-direction: column;
+	padding: 12px 0;
+	width: 18%;
+	min-width: 220px;
+}
+#navcol form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+}
+#navcol h1 {
+	padding-top: 10px;
+	font-size: 1.6rem;
+}
+#navcol h2 {
+	margin-top: 15px;
+	padding-left: 10px;
+	font-size: 1.2rem;
+	text-align: left;
+}
+#navcol div {
+	padding-left: 10px;
+	padding-right: 10px;
+	width:100%;
+}
+#navcol input, #navcol select {
+	width: 100%;
+	border-radius: 6px;
+}
+#navcol button {
+	margin: 20px auto;
+	border-radius: 4px;
+}
+#listsnippets {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	width: 26%;
+	min-width: 240px;
+}
+#listsnippets h1 {
+	padding-top: 10px;
+	font-size: 2.2rem;
+}
+#listsnippets ul {
+	padding: 0 10px;
+	font-size: 1rem;
+}
+#listsnippets li {
+	padding: 0 5px;
+	color: var(--liSnippets);
+}
+#listsnippets h2 {
+	text-align: left;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: var(--lititleSnippet);
+}
+#section_snippet {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	padding: 0 10px;
+	width: 56%;
+	min-width: 330px;
+}
+#section_snippet h1 {
+	padding-top: 0;
+}
+#section_snippet div:nth-child(2) {
+	margin-left: auto;
+	margin-right: auto;
+}
+#section_snippet form {
+	align-self: center;
+	padding: 10px;
+	width: 90%;
+}
+#section_snippet form div {
+	display: flex;
+	justify-content: center;
+}
+#section_snippet form label {
+	min-width: 130px;
+	width: 20%;
+}
+#section_snippet .selected {
+	background-color: palegreen;
+}
+#titlesnippet {
+	padding-bottom: 5px;
+	text-align: left;
+	font-size: 1.5rem;
+	color: var(--violet);
+}
+#cat {
+	font-style: normal;
+	color: var(--liSnippets);
+}
+#section_snippet p {
+	font-size: 1.1rem;
+}
+.tooLast_p {
+	margin-top: 15px;
+	align-self: center;
+}
+/***** Fin Sections Snippets *****/
+/***** Debut Pages Admin *****/
+.sect-adm {
+	/* sect-adm_links, sect-adm_users, sect-adm_typsrubs,
+		sect-adm_recettes, sect-adm_validation */
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	vertical-align: middle;
+	align-items: center;
+}
+.sect-adm div {
+	/* sect-adm_links, sect-adm_users, sect-adm_recettes */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.sect-adm table {
+	/* sect-adm_links, sect-adm_users, sect-adm_recettes */
+	width: 100%;
+	max-width: 1000px;
+}
+.sect-adm th {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	height: 2.8em;
+	background-color: var(--fndTabTh);
+}
+.sect-adm th:first-child {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	border-radius: 4px 0 0 4px;
+}
+.sect-adm th:last-child {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	border-radius: 0 4px 4px 0;
+}
+.sect-adm table td {
+	/* sect-adm_links, sect-adm_users,
+	 	sect-adm_typsrubs, sect-adm_recettes */
+	height: 2.8em;
+	text-align: center;
+}
+.sect-adm select, .sect-adm input {
+	/* sect-adm_links, sect-adm_users, sect-adm_typsrubs */
+	margin: 0 5px;
+	border-radius: 0.25rem;
+	text-align: center;
+}
+.sect-adm .td-modif {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	margin: 0 5px;
+	width: 63px;
+	text-align: center;
+}
+.sect-adm .td-suppr {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	margin: 0 5px;
+	width: 75px;
+	text-align: right;
+}
+.sect-adm .td-ajout {
+	/* sect-adm_links, sect-adm_users,
+		sect-adm_typsrubs, sect-adm_recettes */
+	width: 88px;
+	text-align: center;
+}
+.sect-adm button {
+	/* sect-adm_links, sect-adm_users, sect-adm_typsrubs */
+	margin: 0 5px;
+}
+.sect-adm p {
+	/* sect-adm_links, sect-adm_users, sect-adm_typsrubs,
+		sect-adm_recettes, sect-adm_validation */
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+/***** Debut Page Contacts Admin *****/
+
+/***** Fin Page Contacts Admin *****/
+/***** Debut Page Links Admin *****/
+#sect-adm_links div:nth-child(2) {
+	width: auto;
+}
+#sect-adm_links select {
+	width: calc(100% - 8px);
+}
+/***** Fin Page Links Admin *****/
+/***** Debut Page Utilisateurs Admin *****/
+#sect-adm_users div:nth-child(2) {
+	width: auto;
+}
+#sect-adm_users .t-email {
+	width: 35%;
+}
+#sect-adm_users .t-confirmed {
+	width: 20%;
+}
+#sect-adm_users input {
+	width: 95%;
+}
+/***** Fin Page Utilisateurs Admin *****/
+/***** Debut Page Types et Rubriques Admin
+ 	+ Catégories et Languages Admin *****/
+#sect-adm_catslangs {
+	width: 56%;
+}
+#sect-adm_typsrubs .alert {
+	width: auto;
+}
+#sect-adm_typsrubs div, #sect-adm_catslangs div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 100%;
+}
+#sect-adm_typsrubs table:first-child,
+#sect-adm_catslangs table:first-child {
+	max-width: 400px;
+}
+#sect-adm_typsrubs table:last-child {
+	max-width: 500px;
+}
+#sect-adm_catslangs table:last-child {
+	max-width: 400px;
+}
+#sect-adm_typsrubs th, #sect-adm_catslangs th {
+	border-radius: inherit;
+}
+#sect-adm_typsrubs th:first-child,
+#sect-adm_catslangs th:first-child {
+	border-radius: 4px 0 0 4px;
+}
+#sect-adm_typsrubs th:last-child,
+#sect-adm_catslangs th:last-child {
+	border-radius: 0 4px 4px 0;
+}
+/***** Fin Page Types et Rubriques Admin
+  	+ Catégories et Languages Admin *****/
+/***** Debut Page Recettes Admin *****/
+#sect-adm_recettes div:nth-child(2) {
+	width: auto;
+}
+#sect-adm_recettes th:last-child {
+	border-radius: 0 4px 4px 0;
+}
+#sect-adm_recettes .t-label {
+	width: 40%;
+}
+#sect-adm_recettes .td-modif, #sect-adm_recettes .td-suppr {
+	margin: inherit;
+}
+#sect-adm_recettes .td-modif a {
+	margin-right: 2px;
+}
+#sect-adm_recettes .td-suppr a {
+	margin-left: 2px;
+}
+#sect-adm_recettes p {
+	margin-top: inherit;
+}
+/***** Fin Page Recettes Admin *****/
+/***** Debut Page Contact Admin, Recette Admin, et Snippet Admin *****/
+#sect-adm_contact, #sect-adm_recette,
+#sect-adm_snippet {
+	width: 56%;
+	align-items: center;
+}
+#sect-adm_contact .contact {
+	margin-bottom: 15px;
+	min-width: 420px;
+	max-width: 640px;
+}
+#sect-adm_contact .contact .firstname {
+	font-weight: bold;
+}
+#sect-adm_contact .contact .mail {
+	color: var(--Bleu);
+}
+#sect-adm_contact div:last-child {
+	margin-bottom: 15px;
+}
+#sect-adm_snippet div:nth-child(2) {
+	width: auto;
+}
+#sect-adm_contact form, #sect-adm_recette form,
+#sect-adm_snippet form {
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 900px;
+}
+#sect-adm_contact form > div, #sect-adm_recette form > div,
+#sect-adm_snippet form > div {
+	padding: 10px 0;
+}
+#sect-adm_contact label, #sect-adm_recette label,
+#sect-adm_snippet label {
+	width: calc(31% - 10px);
+}
+#sect-adm_contact input, #sect-adm_contact textarea,
+#sect-adm_recette input, #sect-adm_recette textarea,
+#sect-adm_snippet input, #sect-adm_snippet textarea,
+#sect-adm_snippet select {
+	background-color: var(--fndInput);
+	border-radius: 6px;
+}
+#sect-adm_contact input, #sect-adm_recette input,
+#sect-adm_snippet input, #sect-adm_snippet select {
+	width: 40%;
+	min-width: 180px;
+}
+.areatext_contact, .areatext_recette, .areatext_snippet {
+	display: flex;
+}
+#sect-adm_contact textarea, #sect-adm_recette textarea,
+#sect-adm_snippet textarea {
+	margin-bottom: 7px;
+	width: 40%;
+	min-width: 180px;
+	resize: none;
+}
+#sect-adm_contact form button, #sect-adm_recette form button,
+#sect-adm_snippet form button {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	align-self: center;
+	width: auto;
+	border-radius: 4px;
+}
+#sect-adm_contact form .btn-success,
+#sect-adm_snippet form .btn-success {
+	margin-bottom: 15px;
+}
+#sect-adm_contact div p:last-child {
+	text-align: center;
+}
+#sect-adm_contact a:last-child, #sect-adm_recette a:last-child {
+	margin: 20px 0;
+	border-radius: 4px;
+}
+/***** Fin Page Contact Admin, Recette Admin, et Snippet Admin *****/
+/***** Debut Page Validation Admin *****/
+#sect-adm_validation p {
+	font-size: 1.5em;
+}
+#sect-adm_validation form {
+	padding-bottom: 15px;
+	text-align: center;
+}
+#sect-adm_validation input {
+	margin: 0 5px;
+	border-radius: 0.25rem;
+	text-align: center;
+}
+/***** Fin Page Validation Admin *****/
+/***** Fin Pages Admin *****/
+/********** Fin Sections **********/
+/********** Debut Asides **********/
+#asides {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 16%;
+	min-width: 220px;
+}
+aside {
+	padding: 15px 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+aside h2 {
+	font-size: 1.2em;
+}
+#support_aside {
+	height: auto;
+	background-color: var(--supAside);
+}
+#code_aside {
+	height: auto;
+	background-color: var(--codeAside);
+}
+#site-ext_aside {
+	height: auto;
+	background-color: var(--sitExtAside);
+}
+#recette_aside {
+	height: auto;
+	background-color: var(--recAside);
+}
+/********** Fin Asides **********/
+
+/********** Debut Footer **********/
+footer {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	height: 80px;
+	width: 100%;
+	background-color: var(--fndFooter);
+}
+footer > div {
+	display: flex;
+	height: 80px;
+	width: 20%;
+}
+footer > div:nth-child(2) {
+	width: 60%;
+}
+footer > div p {
+	margin: auto;
+}
+/********** Fin Footer *********/
+
+/********** Design Responsive **********/
+@media screen and (max-width: 1199px) {
+	/********** Debut Header **********/
+	header {
+
+	}
+
+	/********** Debut Menus **********/
+	nav {
+
+	}
+	#nav_header {
+
+	}
+	/********** Fin Header **********/
+	#main {
+
+	}
+	#nav_side {
+
+	}
+	/********** Fin Menus **********/
+
+	/********** Debut Sections **********/
+	section {
+
+	}
+	/********** Fin Sections **********/
+
+	/********** Debut Asides **********/
+	#asides {
+
+	}
+	aside {
+
+	}
+	#support_aside {
+
+	}
+	#code_aside {
+
+	}
+	#site-ext_aside {
+
+	}
+	#recette_aside {
+
+	}
+	/********** Fin Asides **********/
+
+	/********** Debut Footer **********/
+	footer {
+
+	}
+	/********** Fin Footer **********/
+}
+@media screen and (max-width: 991px) {
+	/********** Debut Header **********/
+	header {
+
+	}
+	/********** Debut Menus **********/
+	nav {
+
+	}
+	#nav_header {
+
+	}
+	/********** Fin Header **********/
+	#main {
+
+	}
+	#nav_side {
+
+	}
+	/********** Fin Menus **********/
+
+	/********** Debut Sections **********/
+	section {
+
+	}
+	/********** Fin Sections **********/
+
+	/********** Debut Asides **********/
+	#asides {
+
+	}
+	aside {
+
+	}
+	#support_aside {
+
+	}
+	#code_aside {
+
+	}
+	#site-ext_aside {
+
+	}
+	#recette_aside {
+
+	}
+	/********** Fin Asides **********/
+
+	/********** Debut Footer **********/
+	footer {
+
+	}
+	/********** Fin Footer **********/
+}
+@media screen and (max-width: 767px) {
+	/********** Debut Header **********/
+	header {
+
+	}
+	/********** Debut Menus **********/
+	nav {
+
+	}
+	#nav_header {
+
+	}
+	/********** Fin Header **********/
+	#main {
+
+	}
+	#nav_side {
+
+	}
+	/********** Fin Menus **********/
+
+	/********** Debut Sections **********/
+	section {
+
+	}
+	/********** Fin Sections **********/
+
+	/********** Debut Asides **********/
+	#asides {
+
+	}
+	aside {
+
+	}
+	#support_aside {
+
+	}
+	#code_aside {
+
+	}
+	#site-ext_aside {
+
+	}
+	#recette_aside {
+
+	}
+	/********** Fin Asides **********/
+
+
+	/********** Debut Footer **********/
+	footer {
+
+	}
+	/********** Fin Footer **********/
+}
