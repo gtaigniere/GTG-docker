@@ -20,13 +20,13 @@ section #img1:hover {
 /* Autre utilisation de @keyframes */
 section #img2 {
   transition: .5s;
-  animation: slideDown 1s infinite; /* On peut définir le nombre de fois que l'animation va se faire, ici à l'infinie */
+  /* On peut définir le nombre de fois que l'animation va se faire, ici à l'infinie   animation: slideDown 1s infinite; */
   /* "animation-fill-mode" permet d'indiquer quelles valeurs vont garder les parties animées une fois l'animation terminée, par exemple "forwards" */
   animation: slideDown 1s forwards;
 }
 section #img2:hover {
   transform: scale(1.1) rotate(10deg);
-  animation-play-state: paused: /* Applique un effet de pause */
+  animation-play-state: paused; /* Applique un effet de pause */
 }
 @keyframes slideDown {
   0% {
