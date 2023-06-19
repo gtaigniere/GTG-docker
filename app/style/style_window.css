@@ -12,16 +12,6 @@
 		h5 => 0.83em	=> 13.5px
 		h6 => 0.67em	=> 10.5px */
 
-@font-face {
-	font-family: 'garogier_regular';
-	src: url('../polices/Garogier-webfont.eot');
-	src: url('../polices/Garogier-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../polices/Garogier-webfont.woff') format('woff'),
-		 url('../polices/Garogier-webfont.ttf') format('truetype'),
-		 url('../polices/Garogier-webfont.svg#garogierregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 /********** Fin Fonts **********/
 
 /********** Debut General **********/
