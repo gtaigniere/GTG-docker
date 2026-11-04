@@ -1,0 +1,57 @@
+version: '3.8'
+# lancer avec : docker compose --env-file .env up
+services:
+  web:
+    image: php7.4-apache
+    container_name: php-apache-gtg
+    restart: on-failure
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dbname}
+      MYSQL_USER: ${MYSQL_USERNAME:-admin}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-pwd}
+      APACHE_DOCUMENT_ROOT: /var/www/html/app
+      COMPOSER_ALLOW_SUPERUSER: '1'
+    ports:
+      # local:container
+      - ${APP_PORT:-80}:80
+    volumes:
+      # Volume stockant les fichiers web du projet
+      - ./php:/var/www/html
+    links:
+      # Lien vers le conteneur "db" (déclaré ci-après)
+      - db:db
+
+  db:
+    image: mariadb:latest
+    container_name: mysql-gtg
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dbname}
+      MYSQL_USER: ${MYSQL_USERNAME:-admin}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-pwd}
+    ports:
+      - ${MYSQL_PORT:-3306}:3306
+    volumes:
+      # Volume de la base de données
+      - ./db-data:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    container_name: adminer-gtg
+    restart: on-failure
+    environment:
+      ADMINER_DEFAULT_SERVER: ${ADMINER_DEFAULT_SERVER:-mysql}
+    ports:
+      - ${ADMINER_PORT:-8080}:8080
+    links:
+      - db:db
+
+volumes:
+  db-data:
