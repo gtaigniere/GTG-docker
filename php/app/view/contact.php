@@ -28,7 +28,7 @@ if (isset($form)) {
 
         <?php if ($form instanceof Form) : ?>
 
-        <form class="form_contact" action="?target=admin&admTarg=contact&action=insert" method="POST">
+        <form class="form_contact" action="/admin/contact/insert" method="POST">
 
             <div>
                 <?= $form->input('firstname', 'Prénom :', ['required' => 'required']); ?>

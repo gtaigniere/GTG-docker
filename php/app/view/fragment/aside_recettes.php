@@ -14,7 +14,7 @@ if (isset($recettes)) {
             if ($recette instanceof Recette) : ?>
 
                 <li>
-                    <a href="index.php?target=recette&id=<?= $recette->getIdRec() ?>"><?= $recette->getLabel() ?></a>
+                    <a href="/recette/<?= $recette->getIdRec() ?>"><?= $recette->getLabel() ?></a>
                 </li>
 
             <?php endif;

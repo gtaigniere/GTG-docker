@@ -12,7 +12,7 @@ if (isset($searchForm, $languages, $cats, $search)) {
 <aside id="navcol">
         <h1>Recherche</h1>
 
-        <form action="index.php" method="GET">
+        <form action="/" method="GET">
 
             <?php if ($searchForm instanceof Form) :
                 echo $searchForm->input('action', null, ['type' => 'hidden']);
@@ -66,7 +66,7 @@ if (isset($searchForm, $languages, $cats, $search)) {
             <ul>
                 <?php foreach($snippets as $snip) : ?>
                     <?php if ($snip instanceof Snippet) : ?>
-                        <a href="?target=snippet&id=<?= $snip->getIdSnip() ?>">
+                        <a href="/snippet/<?= $snip->getIdSnip() ?>">
                             <li class="">
                                 <h2><?= $snip->getTitle() ?></h2>
                                 <p><?= $snip->getLanguage() != null ? $snip->getLanguage()->getLabel() : 'Pas de langage' ?></p>

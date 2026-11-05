@@ -49,7 +49,7 @@ if (isset($forms, $rubrics, $types, $formAddLink)) {
 
                     <tr>
 
-                        <form action="?target=admin&admTarg=link&action=update&id=<?= $form->getValue('id') ?>" method="POST">
+                        <form action="/admin/link/update/<?= $form->getValue('id') ?>" method="POST">
 
                             <?= $form->input('id', null, ['style' => 'display: none;', 'type' => 'hidden']); ?>
 
@@ -84,7 +84,7 @@ if (isset($forms, $rubrics, $types, $formAddLink)) {
                         </form>
 
                         <td class="td-suppr">
-                            <a href="?target=admin&admTarg=link&action=delete&id=<?= $form->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+                            <a href="/admin/link/delete/<?= $form->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
                         </td>
 
                     </tr>
@@ -92,7 +92,7 @@ if (isset($forms, $rubrics, $types, $formAddLink)) {
                 <?php endif;
             endforeach; ?>
 
-            <form action="?target=admin&admTarg=link&action=insert" method="POST">
+            <form action="/admin/link/insert" method="POST">
                 <tr>
 
                     <td>
@@ -129,19 +129,19 @@ if (isset($forms, $rubrics, $types, $formAddLink)) {
         </table>
 
         <p>
-            <a href="?target=admin&admTarg=contact">
+            <a href="/admin/contact">
                 <button class="btn btn-primary">Contacts</button>
             </a>
-            <a href="?target=admin&admTarg=user">
+            <a href="/admin/user">
                 <button class="btn btn-primary">Utilisateurs</button>
             </a>
-            <a href="?target=admin&admTarg=typAndRub">
+            <a href="/admin/typAndRub">
                 <button class="btn btn-primary">Types et Rubriques</button>
             </a>
-            <a href="?target=admin&admTarg=recette">
+            <a href="/admin/recette">
                 <button class="btn btn-primary">Recettes</button>
             </a>
-            <a href="?target=admin&admTarg=snippet">
+            <a href="/admin/snippet">
                 <button class="btn btn-primary">Snippets</button>
             </a>
         </p>

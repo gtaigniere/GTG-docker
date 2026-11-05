@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si le nom de domaine/dossier racine est utilisé
+    RewriteBase /
+
+    # Ne pas appliquer la réécriture si le fichier ou le dossier existe réellement
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redirige tout le reste vers index.php (en conservant les paramètres de requête)
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

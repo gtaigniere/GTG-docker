@@ -30,7 +30,7 @@ if (isset($form)) {
 
         <?php if ($form instanceof Form) : ?>
 
-        <form class="form_contact" action="?target=admin&admTarg=contact&action=sendReply" method="POST">
+        <form class="form_contact" action="/admin/contact/sendReply" method="POST">
 
             <div>
                 <?= $form->input('mail', 'Mail :', ['type' => 'email', 'required' => 'required']); ?>

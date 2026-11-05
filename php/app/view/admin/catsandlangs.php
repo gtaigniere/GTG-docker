@@ -51,7 +51,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 
 						<tr>
 
-							<form action="?target=admin&admTarg=cat&action=update&id=<?= $catForm->getValue('id') ?>" method="POST">
+							<form action="/admin/cat/update/<?= $catForm->getValue('id') ?>" method="POST">
 
                                 <?= $catForm->input('id', null, ['style' => 'display: none;', 'type' => 'hidden']); ?>
 
@@ -65,7 +65,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 							</form>
 
 							<td class="td-suppr">
-								<a href="?target=admin&admTarg=cat&action=delete&id=<?= $catForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+								<a href="/admin/cat/delete/<?= $catForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
 							</td>
 
 						</tr>
@@ -73,7 +73,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 					<?php endif;
 				endforeach; ?>
 
-				<form action="?target=admin&admTarg=cat&action=insert" method="POST">
+				<form action="/admin/cat/insert" method="POST">
 				
 					<tr>
 
@@ -104,7 +104,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 
 						<tr>
 
-							<form action="?target=admin&admTarg=language&action=update&id=<?= $languageForm->getValue('id') ?>" method="POST">
+							<form action="/admin/language/update/<?= $languageForm->getValue('id') ?>" method="POST">
 
                                 <?= $languageForm->input('id', null, ['style' => 'display: none;', 'type' => 'hidden']); ?>
 
@@ -115,7 +115,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 							</form>
 
 							<td class="td-suppr">
-                                <a href="?target=admin&admTarg=language&action=delete&id=<?= $languageForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+                                <a href="/admin/language/delete/<?= $languageForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
                             </td>
 
 						</tr>
@@ -123,7 +123,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 					<?php endif;
 				endforeach; ?>
 
-				<form action="?target=admin&admTarg=language&action=insert" method="POST">
+				<form action="/admin/language/insert" method="POST">
 					<tr>
 
 						<td>
@@ -143,7 +143,7 @@ if (isset($catForms, $formAddCat, $languageForms, $formAddLang)) {
 	</div>
 
 	<p>
-		<a href="?target=admin&admTarg=snippet">
+		<a href="/admin/snippet">
 			<button class="btn btn-primary">Snippets</button>
 		</a>
 	</p>

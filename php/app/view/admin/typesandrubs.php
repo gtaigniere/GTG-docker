@@ -47,7 +47,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 
 						<tr>
 
-							<form action="?target=admin&admTarg=type&action=update&id=<?= $typeForm->getValue('id') ?>" method="POST">
+							<form action="/admin/type/update/<?= $typeForm->getValue('id') ?>" method="POST">
 
                                 <?= $typeForm->input('id', null, ['style' => 'display: none;', 'type' => 'hidden']); ?>
 
@@ -61,7 +61,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 							</form>
 
 							<td class="td-suppr">
-								<a href="?target=admin&admTarg=type&action=delete&id=<?= $typeForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+								<a href="/admin/type/delete/<?= $typeForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
 							</td>
 
 						</tr>
@@ -69,7 +69,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 					<?php endif;
 				endforeach; ?>
 
-				<form action="?target=admin&admTarg=type&action=insert" method="POST">
+				<form action="/admin/type/insert" method="POST">
 				
 					<tr>
 
@@ -102,7 +102,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 
 						<tr>
 
-							<form action="?target=admin&admTarg=rubric&action=update&id=<?= $rubForm->getValue('id') ?>" method="POST">
+							<form action="/admin/rubric/update/<?= $rubForm->getValue('id') ?>" method="POST">
 
                                 <?= $rubForm->input('id', null, ['style' => 'display: none;', 'type' => 'hidden']); ?>
 
@@ -119,7 +119,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 							</form>
 
 							<td class="td-suppr">
-                                <a href="?target=admin&admTarg=rubric&action=delete&id=&id=<?= $rubForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+                                <a href="/admin/rubric/delete/<?= $rubForm->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
                             </td>
 
 						</tr>
@@ -127,7 +127,7 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 					<?php endif;
 				endforeach; ?>
 
-				<form action="?target=admin&admTarg=rubric&action=insert" method="POST">
+				<form action="/admin/rubric/insert" method="POST">
 					<tr>
 
 						<td>
@@ -149,19 +149,19 @@ if (isset($typeForms, $formAddType, $rubForms, $formAddRub)) {
 	</div>
 
 	<p>
-        <a href="?target=admin&admTarg=contact">
+        <a href="/admin/contact">
             <button class="btn btn-primary">Contacts</button>
         </a>
-		<a href="?target=admin&admTarg=link">
+		<a href="/admin/link">
 			<button class="btn btn-primary">Liens</button>
 		</a>
-		<a href="?target=admin&admTarg=user">
+		<a href="/admin/user">
 			<button class="btn btn-primary">Utilisateurs</button>
 		</a>
-		<a href="?target=admin&admTarg=recette">
+		<a href="/admin/recette">
 			<button class="btn btn-primary">Recettes</button>
 		</a>
-        <a href="?target=admin&admTarg=snippet">
+        <a href="/admin/snippet">
             <button class="btn btn-primary">Snippets</button>
         </a>
 	</p>

@@ -8,7 +8,7 @@ for(let i = 0; i < pagesMenus.length; i++) {
 		switch (rubrique) {
   		case 'boole':
     		window.setTimeout(function() {
-					location.href="index.php?target=rubrique&id=1"
+					location.href="/rubrique/1"
 				}, 500);
     		break;
     	case 'algorithmie':

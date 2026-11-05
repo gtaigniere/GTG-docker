@@ -16,10 +16,10 @@ if (isset($key, $values)) {
             <?php
                 $href = $link->getType()->getLabel() == 'Recette' ?
                     $link->getAdrOrFile() :
-                    'index.php?target=link&action=open&id=' . $link->getIdLink();
+                    '/link/open/' . $link->getIdLink();
                 ?>
                 <li>
-                    <a href="index.php?target=link&action=open&id=<?= $link->getIdLink() ?>">
+                    <a href="/link/open/<?= $link->getIdLink() ?>">
                         <?= $link->getLabel() ?></a>
                 </li>
 

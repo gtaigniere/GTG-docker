@@ -31,7 +31,7 @@ if (isset($section)) {
 			<nav id="nav_header">
 
 				<div>
-					<a class="ws-nowrap" href="?target=autres_sites">Autres sites</a>
+					<a class="ws-nowrap" href="/autres_sites">Autres sites</a>
 				</div>
 
                 <!--
@@ -40,25 +40,25 @@ if (isset($section)) {
 				-->
 
                 <?php if (!isset($_SESSION['User'])) : ?>
-                    <div><a href="?target=auth&action=subscribe"><button id="button_inscription">Inscription</button></a></div>
+                    <div><a href="/auth/subscribe"><button id="button_inscription">Inscription</button></a></div>
                 <?php endif; ?>
 
 				<ul>
-					<li><a href="index.php">Accueil</a></li>
+					<li><a href="/">Accueil</a></li>
 <!--                    --><?php //if (isset($_SESSION['User']))	: ?>
-                        <li><a href="?target=snippet">Snippets</a></li>
+                        <li><a href="/snippet">Snippets</a></li>
 <!--                    --><?php //endif; ?>
-					<li><a href="?target=vietnam">Vietnam</a></li>
+					<li><a href="/vietnam">Vietnam</a></li>
 
 					<?php if (isset($_SESSION['User']))	: ?>
 
                         <?php if ($_SESSION['User'] == 'v' || $_SESSION['User'] == 'w' || $_SESSION['User'] == 'x' || $_SESSION['User'] == 'z') : ?>
-						    <li><a href="?target=warhammer">Warhammer JDRF</a></li>
+						    <li><a href="/warhammer">Warhammer JDRF</a></li>
                         <?php endif; ?>
 
-						<li><a href="?target=auth&action=logout">Déconnexion</a></li>
+						<li><a href="/auth/logout">Déconnexion</a></li>
 					<?php else : ?>
-						<li><a href="?target=auth&action=loginForm">Connexion</a></li>
+						<li><a href="/auth/loginForm">Connexion</a></li>
 					<?php endif; ?>
 
 				</ul>
@@ -69,7 +69,7 @@ if (isset($section)) {
 
 				<figure>
                     <?php if (isset($_SESSION['User']) && $_SESSION['User'] == 'gilleste') : ?>
-                        <a href="?target=admin&admTarg=link"><img src="imgs/thumbmails/logo.png" alt="Logo"></a>
+                        <a href="/admin/link"><img src="imgs/thumbmails/logo.png" alt="Logo"></a>
                     <?php else : ?>
 					    <img src="imgs/thumbmails/logo.png" alt="Logo">
                     <?php endif; ?>
@@ -117,11 +117,11 @@ if (isset($section)) {
 		<footer>
 
 			<div>
-				<p><a href="?target=contact">Contact</a></p>
+				<p><a href="/contact">Contact</a></p>
 			</div>
 
 			<div>
-				<p>© Copyright 2019 - <strong><a href="index.php">gtg.fr</a></strong> - <span class="ws-nowrap">Tous droits réservés</span></p>
+				<p>© Copyright 2019 - <strong><a href="/">gtg.fr</a></strong> - <span class="ws-nowrap">Tous droits réservés</span></p>
 			</div>
 
 			<div>
