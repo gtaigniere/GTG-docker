@@ -12,13 +12,9 @@ if (isset($searchForm, $languages, $cats, $search)) {
 <aside id="navcol">
         <h1>Recherche</h1>
 
-        <form action="/" method="GET">
+        <form action="/snippet/search" method="GET" onsubmit="cleanForm(this)">
 
-            <?php if ($searchForm instanceof Form) :
-                echo $searchForm->input('action', null, ['type' => 'hidden']);
-                echo $searchForm->input('target', null, ['type' => 'hidden']);
-
-                ?>
+            <?php if ($searchForm instanceof Form) : ?>
                 <div>
                     <?= $searchForm->input('search', null); ?>
                 </div>
@@ -79,6 +75,18 @@ if (isset($searchForm, $languages, $cats, $search)) {
         <?php endif; ?>
 
     </aside>
+
+    <script>
+      function cleanForm(form) {
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          // Si le champ est vide, on supprime son 'name' pour qu'il n'encombre pas l'URL
+          if (!input.value || input.value === "") {
+            input.name = "";
+          }
+        });
+      }
+    </script>
 <?php
 }
 ?>
