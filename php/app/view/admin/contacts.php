@@ -39,8 +39,8 @@ if (isset($contacts)) {
                 <p><?= $contact->getMessage(); ?></p>
 
                 <p>
-                    <a href="?target=admin&admTarg=contact&action=reply&id=<?= $contact->getId(); ?>"><button class="btn btn-secondary">Répondre</button></a>
-                    <a href="?target=admin&admTarg=contact&action=delete&id=<?= $contact->getId(); ?>"><button class="btn btn-danger">Supprimer</button></a>
+                    <a href="/admin/contact/reply/<?= $contact->getId(); ?>"><button class="btn btn-secondary">Répondre</button></a>
+                    <a href="/admin/contact/delete/<?= $contact->getId(); ?>"><button class="btn btn-danger">Supprimer</button></a>
                 </p>
             </div>
 
@@ -48,19 +48,19 @@ if (isset($contacts)) {
         endforeach; ?>
 
         <p>
-            <a href="?target=admin&admTarg=link">
+            <a href="/admin/link">
                 <button class="btn btn-primary">Liens</button>
             </a>
-            <a href="?target=admin&admTarg=user">
+            <a href="/admin/user">
                 <button class="btn btn-primary">Utilisateurs</button>
             </a>
-            <a href="?target=admin&admTarg=typAndRub">
+            <a href="/admin/typAndRub">
                 <button class="btn btn-primary">Types et Rubriques</button>
             </a>
-            <a href="?target=admin&admTarg=recette">
+            <a href="/admin/recette">
                 <button class="btn btn-primary">Recettes</button>
             </a>
-            <a href="?target=admin&admTarg=snippet">
+            <a href="/admin/snippet">
                 <button class="btn btn-primary">Snippets</button>
             </a>
         </p>

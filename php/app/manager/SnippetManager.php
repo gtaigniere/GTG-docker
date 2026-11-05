@@ -339,8 +339,9 @@ class SnippetManager extends Manager
      * @param int[] $idCats Tableau contenant les différents ids des catégories recherchées
      * @return string
      */
-    private function createRequest(string $chaine, array $idLangs, array $idCats): string
+    private function createRequest(string $chaine = '', array $idLangs = [], array $idCats = []): string
     {
+        $chaine = $chaine ?? '';
         $wheres = [];
         $req = 'SELECT s0.* FROM snippet s0 ';
         if (!empty($idCats)) {
@@ -381,8 +382,9 @@ class SnippetManager extends Manager
      * sinon renvoit tous les snippets correspondant aux critères de la recherche
      * @return Snippet[]|Snippet|null
      */
-    public function research(string $chaine, array $idLangs, array $idCats, bool $one = false)
+    public function research(?string $chaine = '', array $idLangs = [], array $idCats = [], bool $one = false)
     {
+        $chaine = $chaine ?? '';
         $chaines = [];
         if ($chaine != null && $chaine != '') {
             $chaine = '%' . $chaine . '%';

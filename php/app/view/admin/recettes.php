@@ -52,10 +52,10 @@ if (isset($recettes)) {
                             <td><?php if ($recette->getPhoto() != null) { echo $recette->getPhoto(); } ?></td>
 
                             <td class="td-modif">
-                                <a href="?target=admin&admTarg=recette&action=update&id=<?= $recette->getIdRec() ?>" class="btn btn-warning">Modifier</a>
+                                <a href="/admin/recette/update/<?= $recette->getIdRec() ?>" class="btn btn-warning">Modifier</a>
                             </td>
                             <td class="td-suppr">
-                                <a href="?target=admin&admTarg=recette&action=delete&id=<?= $recette->getIdRec() ?>" class="btn btn-danger">Supprimer</a>
+                                <a href="/admin/recette/delete/<?= $recette->getIdRec() ?>" class="btn btn-danger">Supprimer</a>
                             </td>
 
                         </tr>
@@ -68,7 +68,7 @@ if (isset($recettes)) {
             </table>
 
             <p>
-                <a href="?target=admin&admTarg=recette&action=insert"><button class="btn btn-success">Ajouter une recette</button></a>
+                <a href="/admin/recette/insert"><button class="btn btn-success">Ajouter une recette</button></a>
                 <form enctype="multipart/form-data" action="" method="POST">
                     <button class="btn btn-violet">Uploader une image</button>
                     <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
@@ -77,19 +77,19 @@ if (isset($recettes)) {
             </p>
 
             <p>
-                <a href="?target=admin&admTarg=contact">
+                <a href="/admin/contact">
                     <button class="btn btn-primary">Contacts</button>
                 </a>
-                <a href="?target=admin&admTarg=link">
+                <a href="/admin/link">
                     <button class="btn btn-primary">Liens</button>
                 </a>
-                <a href="?target=admin&admTarg=typAndRub">
+                <a href="/admin/typAndRub">
                     <button class="btn btn-primary">Types et Rubriques</button>
                 </a>
-                <a href="?target=admin&admTarg=user">
+                <a href="/admin/user">
                     <button class="btn btn-primary">Utilisateurs</button>
                 </a>
-                <a href="?target=admin&admTarg=snippet">
+                <a href="/admin/snippet">
                     <button class="btn btn-primary">Snippets</button>
                 </a>
             </p>

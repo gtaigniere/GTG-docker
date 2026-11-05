@@ -2,12 +2,12 @@
 
         <h1>Connexion</h1>
 
-        <form action="" method="POST">
+        <form action="/auth/login" method="POST">
 
         <div>
             <label for="pseudo">Pseudo :</label>
             <input id="pseudo" type="text" name="pseudo"
-                   value="<?php if(isset($pseudo)) {echo $pseudo;} ?>" required />
+                   value="<?php if(isset($pseudo)) { echo htmlspecialchars($pseudo, ENT_QUOTES, 'UTF-8'); } ?>" required />
         </div>
 
         <div>

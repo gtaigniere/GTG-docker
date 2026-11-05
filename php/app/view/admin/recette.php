@@ -61,7 +61,7 @@ if (isset($form) && $form instanceof Form) :
             </form>
 
             <?php if ($isUpdate) : ?>
-                <a href="?target=admin&admTarg=recette&action=delete&id=<?= $form->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
+                <a href="/admin/recette/delete/<?= $form->getValue('id') ?>" class="btn btn-danger">Supprimer</a>
             <?php endif; ?>
 
         </section>

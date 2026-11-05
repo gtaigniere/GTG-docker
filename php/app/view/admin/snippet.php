@@ -61,13 +61,13 @@ if (isset($snippet)) {
         </em></p>
 
         <p class="tooLast_p">
-            <a href="?target=admin&admTarg=snippet&action=insert"><button class="btn btn-success">Ajouter</button></a>
-            <a href="?target=admin&admTarg=snippet&action=update&id=<?= $snippet->getIdSnip() ?>"><button class="btn btn-warning">Modifier</button></a>
-            <a href="?target=admin&admTarg=snippet&action=delete&id=<?= $snippet->getIdSnip() ?>"><button class="btn btn-danger">Supprimer</button></a>
+            <a href="/admin/snippet/insert"><button class="btn btn-success">Ajouter</button></a>
+            <a href="/admin/snippet/update/<?= $snippet->getIdSnip() ?>"><button class="btn btn-warning">Modifier</button></a>
+            <a href="/admin/snippet/delete/<?= $snippet->getIdSnip() ?>"><button class="btn btn-danger">Supprimer</button></a>
         </p>
         <p class="tooLast_p">
-            <a href="?target=admin&admTarg=catAndLang"><button class="btn btn-primary">Catégories et Langages</button></a>
-            <a href="?target=admin&admTarg=link"><button class="btn btn-primary">Liens</button></a>
+            <a href="/admin/catAndLang"><button class="btn btn-primary">Catégories et Langages</button></a>
+            <a href="/admin/link"><button class="btn btn-primary">Liens</button></a>
         </p>
 
     <?php endif; ?>
